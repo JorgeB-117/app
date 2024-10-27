@@ -68,3 +68,20 @@ canvas.addEventListener('mousedown', startDrawing);
 canvas.addEventListener('mousemove', draw);
 canvas.addEventListener('mouseup', stopDrawing);
 canvas.addEventListener('mouseout', stopDrawing);
+
+//Task 4: Add Color Selection and Canvas Clearing
+
+// Add event listeners for tool radio buttons
+toolInputs.forEach(input => {
+    input.addEventListener('change', (e) => {
+        tool = e.target.value;
+    });
+});
+
+// Add event listener for color input
+colorPicker.addEventListener('input', (e) => {
+    color = e.target.value;
+});
+
+// Add event listener for clear button
+clearButton.addEventListener('click', clearCanvas);
