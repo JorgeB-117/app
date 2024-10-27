@@ -15,10 +15,10 @@ const colorPicker = document.getElementById('colorPicker');
 const clearButton = document.getElementById('clearCanvas');
 
 // Function to start drawing
-function startDrawing() {
+function startDrawing(e) {
     drawing = true;
-    startX = offsetX;
-    startY = offsetY;
+    startX = e.offsetX;
+    startY = e.offsetY;
     ctx.beginPath();
     ctx.moveTo(startX, startY);
 };
